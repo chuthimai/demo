@@ -13,11 +13,7 @@ def encryption(text ,shift):
 
         if text[i] in alphabet:
             find = shift + alphabet.index(text[i])
-
-            if find>=len(alphabet):
-                res_text+=alphabet[find-len(alphabet)]
-            else:
-                res_text+=alphabet[find]
+            res_text+=alphabet[find%26]
 
         else:
             res_text+=text[i]
@@ -32,7 +28,7 @@ def decrytion(text, shift):
 
         if text[i] in alphabet:
             find = alphabet.index(text[i])-shift
-            res_text += alphabet[find]
+            res_text += alphabet[find%26]
 
         else:
             res_text += text[i]
