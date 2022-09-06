@@ -58,7 +58,7 @@ while is_game_over==False:
         print(f"The number of card left: {len(card)}")
 
     calculate_score(user_cards) # to print correct value of cards
-    print(f"Your card: {user_cards}\nYour point is {calculate_score(user_cards)}")
+    print(f"Computer's fist card: {computer_cards[0]}\nYour card: {user_cards}\nYour point is {calculate_score(user_cards)}")
 
     # user put one more card?
     if calculate_score(user_cards)<21:
