@@ -28,15 +28,15 @@ def calculate_score(cards):
 
 def compare(computer_score,user_score):
     if(user_score==computer_score or (user_score>21 and computer_score>21)):
-        print("Draw 🙃🙃🙃.")
+        print("Draw 🙃🙃🙃.\n")
     elif(user_score>21 or computer_score==21):
-        print("You lose 😤😤😤.")
+        print("You lose 😤😤😤.\n")
     elif(computer_score>21 or user_score==21):
-        print("You win 😎😎😎.")
+        print("You win 😎😎😎.\n")
     elif(computer_score>user_score):
-        print("You lose 😭😭😭.")
+        print("You lose 😭😭😭.\n")
     elif(computer_score<user_score):
-        print("You win 😁😁😁.")
+        print("You win 😁😁😁.\n")
     return
 
 is_game_over=False
@@ -71,7 +71,7 @@ while is_game_over==False:
 
             # calculate and give result
             computer_put_one_card(computer_cards) #computer put some more
-            calculate_score(computer_cards) # to print correct value of cards
+            calculate_score(computer_cards) # to print correct value of cards (when card is 11 or 1)
             print(f"Computer cards: {computer_cards}\nComputer point is {calculate_score(computer_cards)}")
             compare(calculate_score(computer_cards), calculate_score(user_cards))
 
