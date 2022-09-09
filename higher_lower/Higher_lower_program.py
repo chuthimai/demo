@@ -8,6 +8,7 @@ rd.shuffle(data)
 is_game_over = False
 user_score = 0
 
+
 def compare(choose, followerA, followerB):
     global user_score, is_game_over
     if choose == "a" and followerA > followerB:
@@ -23,6 +24,7 @@ def compare(choose, followerA, followerB):
         print(f"Sorry, that's wrong. Final score: {user_score}")
     if len(data) == 1:
         is_game_over = True
+
 
 while not is_game_over:
     A = data[0]
