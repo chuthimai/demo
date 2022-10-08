@@ -20,9 +20,9 @@ def colors():
 turn = [0, 90, 180, 270]
 color = [ "#533E85", "#488FB1", "#4FD3C4", "#B958A5"]
 
-for i in range(200):
+for i in range(500):
     tim.color(rd.choice(color))
-    tim.forward(10)
+    tim.forward(5)
     tim.right(rd.choice(turn))
 
 screen.exitonclick()

@@ -9,7 +9,7 @@ turtle.colormode(255)
 
 tim.penup()
 tim.goto(-100,-100)
-tim.speed("fastest")
+tim.speed("fast")
 
 colors = cg.extract("2.png", 30)
 rbg_color = []
@@ -22,6 +22,7 @@ for color in colors:
 
 n = 15
 
+
 def dot():
     tim.pendown()
     tim.dot(10, rd.choice(rbg_color))
@@ -32,6 +33,7 @@ def dot():
 def row():
     for i in range(n):
         dot()
+
 
 for i in range(n):
     row()
