@@ -8,45 +8,42 @@ screen = Screen()
 turtle.colormode(255)
 
 tim.penup()
-tim.goto(-100, -100)
-tim.speed("fast")
+tim.goto(-100,-100)
+tim.speed("fastest")
 
-colors = cg.extract("2.png", 3)
-rgb_color = []
+colors = cg.extract("2.png", 30)
+rbg_color = []
 for color in colors:
     r = color.rgb.r
     g = color.rgb.g
     b = color.rgb.b
     new_color = (r, g, b)
-    rgb_color.append(new_color)
+    rbg_color.append(new_color)
 
-n = 100
-
+n = 15
 
 def dot():
-    global rgb_color
     tim.pendown()
-    tim.dot(5, rd.choice(rgb_color))
+    tim.dot(10, rd.choice(rbg_color))
     tim.penup()
-    tim.forward(5)
+    tim.forward(30)
 
 
 def row():
-    for j in range(n):
+    for i in range(n):
         dot()
-
 
 for i in range(n):
     row()
-    if i % 2 == 0:
+    if i%2 == 0:
         tim.left(90)
-        tim.forward(5)
+        tim.forward(30)
         tim.left(90)
-        tim.forward(5)
+        tim.forward(30)
     else:
         tim.right(90)
-        tim.forward(5)
+        tim.forward(30)
         tim.right(90)
-        tim.forward(5)
+        tim.forward(30)
 
 screen.exitonclick()
