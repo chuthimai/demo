@@ -8,7 +8,7 @@ colors = ["#FF1E1E", "#FF7F3F", "#F7D716", "#36AE7C", "#31C6D4", "#293462", "#C7
 line = Turtle()
 line.penup()
 line.color("red")
-line.goto(x=230, y=-250)
+line.goto(x=250, y=-250)
 line.pendown()
 line.left(90)
 line.forward(500)
@@ -58,7 +58,7 @@ if user_bet:
 while is_race_on:
     for tur in turtle_list:
         tur.forward(rd.choice(range(1,11)))
-        if tur.xcor() > 230:
+        if tur.xcor() > 250:
             winning_color = check(tur)
 
             if user_bet.lower() == winning_color:
