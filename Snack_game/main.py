@@ -25,10 +25,19 @@ screen.onkey(my_snack.down, "Down")
 screen.onkey(my_snack.right, "Right")
 screen.onkey(my_snack.left, "Left")
 
+user_level = screen.textinput("Level", "What level do you want play? easy, medium or hard?").lower()
+
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
+
+    if user_level == "easy":
+        time.sleep(0.1)
+    elif user_level == "medium":
+        time.sleep(0.05)
+    elif user_level == "hard":
+        time.sleep(0.01)
+
     my_snack.move()
 
     # process food
