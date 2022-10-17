@@ -11,7 +11,7 @@ class Score(Turtle):
         self.color("white")
         self.hideturtle()
         self.penup()
-        self.goto(x=0, y=275)
+        self.goto(x=0, y=310)
         self.write_score()
 
     def update_score(self):
