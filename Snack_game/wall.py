@@ -6,7 +6,7 @@ class Wall(Turtle):
         super().__init__()
         self.penup()
         self.hideturtle()
-        self.pencolor("#425F57")
+        self.pencolor("#B7C4CF")
         self.goto(-300, -300)
         self.pendown()
         self.pensize(10)

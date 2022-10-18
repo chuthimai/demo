@@ -21,7 +21,7 @@ class Snack:
         new_segment = Turtle()
         new_segment.shapesize(stretch_len=0.5, stretch_wid=0.5)
         new_segment.shape("square")
-        new_segment.color("#00ABB3")
+        new_segment.color("#FFCACA")
         new_segment.penup()
         new_segment.goto(position)
         self.segments.append(new_segment)
