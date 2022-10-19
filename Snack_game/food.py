@@ -7,6 +7,7 @@ class Food(Turtle):
         super().__init__()
         self.create_food()
 
+
     def create_food(self):
         self.shape("circle")
         self.shapesize(stretch_wid=0.5, stretch_len=0.5)
