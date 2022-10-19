@@ -12,7 +12,7 @@ class Food(Turtle):
         self.shapesize(stretch_wid=0.5, stretch_len=0.5)
         self.penup()
         self.goto(rd.randint(-280, 280), rd.randint(-280, 280))
-        self.color("#FFECEF")
+        self.color("#FFCACA")
 
     def new_food(self):
         self.clear()
