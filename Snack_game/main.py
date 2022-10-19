@@ -27,17 +27,21 @@ screen.onkey(my_snack.left, "Left")
 
 user_level = screen.textinput("Level", "What level do you want play? easy, medium or hard?").lower()
 
+t = 0
+if user_level == "easy":
+    t = 0.1
+elif user_level == "medium":
+    t = 0.05
+elif user_level == "hard":
+    t = 0.01
+
+my_snack.speed = t
+
 game_is_on = True
 while game_is_on:
     screen.update()
-
-    if user_level == "easy":
-        time.sleep(0.1)
-    elif user_level == "medium":
-        time.sleep(0.05)
-    elif user_level == "hard":
-        time.sleep(0.01)
-
+    t = my_snack.speed
+    time.sleep(t)
     my_snack.move()
 
     # process food
@@ -45,6 +49,7 @@ while game_is_on:
         my_food.new_food()
         my_score.update_score()
         my_snack.extend()
+        my_snack.speed *= 0.9
 
     # process hit the wall
     if abs(my_snack.head.xcor()) > 295 or abs(my_snack.head.ycor()) > 295:

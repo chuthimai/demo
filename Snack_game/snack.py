@@ -11,6 +11,7 @@ class Snack:
         self.segments = []
         self.create_snack()
         self.head = self.segments[0]
+        self.speed = 0
 
     def create_snack(self):
         for index in range(3):
