@@ -10,7 +10,7 @@ class Ball(Turtle):
         self.penup()
         self.x_move = 10
         self.y_move = 10
-        self.speed = 0.05
+        self.speed = 0.1
         self.direction = [0, 30, 45, 60, 120, 135, 150, 180, 210, 225, 240, 300, 215, 330]
 
     def move(self):
