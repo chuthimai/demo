@@ -1,8 +1,16 @@
-from turtle import *
+from matplotlib.pyplot import *
+from numpy import *
 
-color('purple')
-for i in range(40):
-    forward(200)
-    right(110)
+x = linspace(-10, 20, 30)
+y = []
+for i in x:
+    if i<0:
+        y.append(0)
+    else:
+        y.append(0.2*1.5**i)
 
-bye()
+axis([-10, 21, -0.5, 1000])
+
+stem(x, y)
+# show()
+savefig("draw.png")
