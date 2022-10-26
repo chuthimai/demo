@@ -6,6 +6,7 @@ from wall import Wall
 import time
 
 
+
 screen = Screen()
 screen.setup(width=700, height=700)
 screen.bgcolor("#251B37")
