@@ -1,16 +1,23 @@
 from matplotlib.pyplot import *
 from numpy import *
+from math import *
+from cmath import *
 
-x = linspace(-10, 20, 30)
-y = []
-for i in x:
-    if i<0:
-        y.append(0)
-    else:
-        y.append(0.2*1.5**i)
+n = linspace(0, 40, 40)
+s = complex(-1/12, pi/6)
+K = 2
+x = []
+for i in n:
+    x.append(K*exp(s*i))
 
-axis([-10, 21, -0.5, 1000])
+subplot(2, 1, 1)
+stem(n, real(x))
+title("Phan thuc")
+axis([0, 40, -2, 2])
 
-stem(x, y)
+subplot(2, 1, 2)
+stem(n, imag(x))
+title("Phan ao")
+axis([0, 40, -2, 2])
 # show()
 savefig("draw.png")
