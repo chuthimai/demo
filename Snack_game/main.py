@@ -5,7 +5,6 @@ from score import Score
 from wall import Wall
 import time
 
-
 screen = Screen()
 screen.setup(width=700, height=700)
 screen.bgcolor("#06283D")

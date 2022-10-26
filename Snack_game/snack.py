@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 UP = 90
 DOWN = 270
 RIGHT = 0
