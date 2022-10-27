@@ -18,6 +18,7 @@ xlabel("Thoi gian (s)")
 ylabel("Bien do")
 title("Day xung rang cua")
 
+
 subplot(2,1,2)
 x2 = A*signal.square(2*pi*t/N, DRX/L)
 stem(t, x2)
