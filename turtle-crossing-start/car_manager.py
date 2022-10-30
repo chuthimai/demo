@@ -1,7 +1,7 @@
 from turtle import Turtle
 import random as rd
 
-COLORS = ["#FFABE1", "#ADDDD0", "#FAF4B7", "#319DA0", "#7DE5ED", "#5F9DF7", "#B1B2FF"]
+COLORS = ["#FFABE1", "#ADDDD0", "#E6CBA8", "#319DA0", "#7DE5ED", "#5F9DF7", "#B1B2FF"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
 
