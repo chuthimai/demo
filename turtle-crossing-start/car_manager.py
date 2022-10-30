@@ -13,7 +13,7 @@ class CarManager:
         self.car_speed = STARTING_MOVE_DISTANCE
 
     def create_cars(self):
-        random_chance = rd.randint(1, 6)
+        random_chance = rd.randint(1, 5)
         if random_chance == 1:
             new_car = Turtle()
             new_car.color(rd.choice(COLORS))

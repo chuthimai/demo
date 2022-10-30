@@ -34,7 +34,7 @@ while game_is_on:
     if tim.check_finish_line():
         tim.reset()
         score.up_level()
-        speed *= 0.6
+        speed *= 0.8
 
 
 screen.exitonclick()
