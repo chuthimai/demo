@@ -31,8 +31,8 @@ if user_level == "easy":
     t = 0.1
 elif user_level == "medium":
     t = 0.05
-elif user_level == "hard":
-    t = 0.01
+else:
+    t = 0.03
 
 my_snack.speed = t
 
