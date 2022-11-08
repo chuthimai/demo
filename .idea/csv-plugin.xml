@@ -24,6 +24,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/NATO-alphabet-start/nato_phonetic_alphabet.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/us-states-game-start/50_states.csv">
           <value>
             <Attribute>
