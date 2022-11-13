@@ -4,8 +4,8 @@ import math
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#FF8DC7"
 RED = "#e7305b"
-GREEN = "#54B435"
-YELLOW = "#73bcd5"
+VIOLET = "#80489C"
+BLUE = "#73bcd5"
 FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
@@ -20,7 +20,7 @@ def reset_timer():
     window.after_cancel(timer)
     reps = 1
     canvas.itemconfig(timer_text, text="00:00")
-    label.config(text="Timer", fg=GREEN)
+    label.config(text="Timer", fg=VIOLET)
     check.config(text="")
 
 
@@ -32,10 +32,10 @@ def start_timer():
         count_down(WORK_MIN*60)
     else:
         if reps % 8 == 0:
-            label.config(text="BREAK", fg=GREEN)
+            label.config(text="BREAK", fg=VIOLET)
             count_down(LONG_BREAK_MIN*60)
         else:
-            label.config(text="BREAK", fg=GREEN)
+            label.config(text="BREAK", fg=VIOLET)
             count_down(SHORT_BREAK_MIN*60)
     reps += 1
 
@@ -65,24 +65,24 @@ def count_down(count):
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
-window.config(padx=100, pady=50, bg=YELLOW)
+window.config(padx=100, pady=50, bg=BLUE)
 
-label = Label(text="Timer", font=(FONT_NAME, 40, "normal"), bg=YELLOW, fg=GREEN)
+label = Label(text="Timer", font=(FONT_NAME, 40, "normal"), bg=BLUE, fg=VIOLET)
 label.grid(row=0, column=1)
 
-canvas = Canvas(window, width=800, height=498, bg=YELLOW, highlightthickness=0)
+canvas = Canvas(window, width=800, height=498, bg=BLUE, highlightthickness=0)
 photo = PhotoImage(file='snack.gif')
 canvas.create_image(400, 249, image=photo)
 timer_text = canvas.create_text(400, 249, text="00:00", font=(FONT_NAME, 60, "bold"), fill="black")
 canvas.grid(row=1, column=1)
 
-button_start = Button(text="Start", highlightbackground="black", bg=YELLOW, command=start_timer)
+button_start = Button(text="Start", highlightbackground="black", bg=BLUE, command=start_timer)
 button_start.grid(row=2, column=0)
 
-button_reset = Button(text="Reset", highlightbackground="black", bg=YELLOW, command=reset_timer)
+button_reset = Button(text="Reset", highlightbackground="black", bg=BLUE, command=reset_timer)
 button_reset.grid(row=2, column=2)
 
-check = Label(font=(FONT_NAME, 40, "normal"), bg=YELLOW, fg=GREEN)
+check = Label(font=(FONT_NAME, 40, "normal"), bg=BLUE, fg=VIOLET)
 check.grid(row=3, column=1)
 
 window.mainloop()
