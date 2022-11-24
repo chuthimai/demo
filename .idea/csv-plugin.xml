@@ -31,6 +31,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/password-manager-start/Password.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/us-states-game-start/50_states.csv">
           <value>
             <Attribute>
