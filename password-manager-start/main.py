@@ -36,7 +36,7 @@ def save():
         password = entry_pass.get()
         username = entry_user.get()
 
-        if len(web)==0 or len(password)==0 or len(username)==0:
+        if len(web) == 0 or len(password) == 0 or len(username) == 0:
             messagebox.showinfo(title="Oops", message="Please make sure you haven't left any fields empty.")
         else:
             is_ok = messagebox.askokcancel(title=web, message=f"There are the details entered:\nEmail: {username}\n"
@@ -49,7 +49,6 @@ def save():
                 entry_pass.delete(0, END)
             else:
                 pass
-
 
 
 # ---------------------------- UI SETUP ------------------------------- #
