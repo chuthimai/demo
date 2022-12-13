@@ -56,7 +56,8 @@ def save():
         data.update(new_data)
 
         if len(web) == 0 or len(password) == 0 or len(username) == 0:
-            messagebox.showinfo(title="Oops", message="Please make sure you haven't left any fields empty.")
+            messagebox.showinfo(title="Oops",
+                                message="Please make sure you haven't left any fields empty.")
         else:
             is_ok = messagebox.askokcancel(title=web, message=f"There are the details entered:\nEmail: {username}\n"
                                                       f"Password: {password}\nIs this ok to save?")
@@ -77,9 +78,12 @@ def search():
         web = entry_web.get()
         try:
             information = data[web]
-            messagebox.showinfo(title=web, message=f"Email: {information['email']}\nPassword: {information['password']}")
+            messagebox.showinfo(title=web,
+                                message=f"Email/Username: {information['email']}\n"
+                                        f"Password: {information['password']}")
         except KeyError:
-            messagebox.showinfo(title="Oops", message="Don't have information about this web")
+            messagebox.showinfo(title="Oops",
+                                message="Don't have information about this web")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -125,7 +129,7 @@ button_add = Button(text="Add", width=33, highlightbackground="black", command=s
 button_add.grid(row=4, column=1, columnspan=2)
 
 # Button Search
-button_search = Button(text="Search", highlightbackground="black", command=search)
+button_search = Button(text="Search", width=13, highlightbackground="black", command=search)
 button_search.grid(row=1, column=2)
 
 window.mainloop()

@@ -31,6 +31,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/flash-card-project-start/data/french-english-vietnamese.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/us-states-game-start/50_states.csv">
           <value>
             <Attribute>
