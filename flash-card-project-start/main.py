@@ -10,6 +10,8 @@ file = pd.read_csv("data/english-vietnamese.csv")
 to_learn = file.to_dict(orient='records')
 word = {}
 flip_timer = "0"
+
+
 #-------------------------------------------------------------------------------------
 
 
@@ -29,6 +31,11 @@ def flip_card():
     flash_card.itemconfig(flash_card_background, image=photo_card_back)
 
 
+def is_know():
+    to_learn.remove(word)
+    next_card()
+
+
 #-------------------------------------------------------------------------------------
 
 
@@ -46,7 +53,7 @@ wrong = Button(image=photo_wrong, highlightthickness=0, command=next_card)
 wrong.grid(row=1, column=0)
 
 photo_right = PhotoImage(file="images/right_1.gif")
-right = Button(image=photo_right, highlightthickness=0, command=next_card)
+right = Button(image=photo_right, highlightthickness=0, command=is_know)
 right.grid(row=1, column=1)
 
 next_card()
