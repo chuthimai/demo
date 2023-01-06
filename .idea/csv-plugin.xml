@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/Birthday Wisher (Day 32) start/birthday-wisher-extrahard-start/birthdays.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Day 25/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv">
           <value>
             <Attribute>
