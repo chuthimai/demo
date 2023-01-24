@@ -1,9 +1,10 @@
 import requests
 import datetime as dt
+import os
 
 pixela_endpoint = "https://pixe.la/v1/users"
-USERNAME = "mai3723"
-TOKEN = "weshouldreadbookeveryday"
+USERNAME = os.environ.get("USERNAME")
+TOKEN = os.environ.get("TOKEN")
 
 # Create an account
 user_param = {
@@ -51,7 +52,7 @@ pixel_config = {
 pixel_put_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/graph1/{today}"
 
 new_pixel_data = {
-    "quantity": "1.5"
+    "quantity": "1.0"
 }
 
 response = requests.put(url=pixel_put_endpoint, json=new_pixel_data, headers=headers)
