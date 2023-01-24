@@ -42,7 +42,7 @@ today = today.strftime("%Y%m%d")
 
 pixel_config = {
     "date": today,
-    "quantity": "1.5"
+    "quantity": "2.5"
 }
 
 # response = requests.post(url=pixel_endpoint, json=pixel_config, headers=headers)
@@ -51,7 +51,7 @@ pixel_config = {
 pixel_put_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/graph1/{today}"
 
 new_pixel_data = {
-    "quantity": "3.0"
+    "quantity": "1.5"
 }
 
 response = requests.put(url=pixel_put_endpoint, json=new_pixel_data, headers=headers)
