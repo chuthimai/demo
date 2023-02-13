@@ -8,4 +8,6 @@ class FlightData:
         self.destination_airport = destination_airport
         self.local_departure = local_departure
         self.local_arrival = local_arrival
+        self.stop_over = 0
+        self.via_city = []
 

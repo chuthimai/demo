@@ -14,25 +14,22 @@ class DataManager(FlightSearch):
         self.date_from = date_from
         self.date_to = date_to
 
-    # To get data when fix bug
-    def get(self):
-        data_sheet = requests.get(url=self.endpoint_sheet).json()["prices"]
-        return data_sheet
-
     def put_lowest_prices(self):
         flight = self.check_flight(self.from_city, self.to_city, self.date_from, self.date_to)
-
+        destination_city_code = flight.destination_cityCode
         city_has_gone = False
+
         for i in self.data_sheet:
-            if i['iataCode'] == flight.destination_cityCode and flight.price <= i['lowestPrice']:
-                endpoint_put = f"{self.endpoint_sheet}/{i['id']}"
-                parameter_sheet = {
-                    "price": {
-                        "lowestPrice": flight.price,
-                    }
-                }
-                requests.put(url=endpoint_put, json=parameter_sheet)
+            if destination_city_code == i['iataCode']:
                 city_has_gone = True
+                if flight.price <= i['lowestPrice']:
+                    endpoint_put = f"{self.endpoint_sheet}/{i['id']}"
+                    parameter_sheet = {
+                        "price": {
+                            "lowestPrice": flight.price,
+                        }
+                    }
+                    requests.put(url=endpoint_put, json=parameter_sheet)
                 break
 
         if not city_has_gone:
@@ -48,7 +45,7 @@ class DataManager(FlightSearch):
 
         if city_has_gone:
             notification = NotificationManager()
-            notification.send_mess(flight)
+            notification.send_email(flight)
 
 
 

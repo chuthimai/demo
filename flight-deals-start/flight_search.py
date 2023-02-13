@@ -41,9 +41,14 @@ class FlightSearch:
 
         try:
             data = response.json()["data"][0]
+            flight_way = response.json()["data"][0]["route"]
         except IndexError:
             print(f"No flights found for {to_city}.")
             return None
+        city_through = [from_city]
+        for inf in flight_way:
+            city_through.append(inf['cityTo'])
+
         data_flight = FlightData(
             price=round(int(data["price"]), -3),
             origin_city=from_city,
@@ -52,13 +57,14 @@ class FlightSearch:
             destination_cityCode=self.get_code(to_city),
             destination_airport=data["route"][0]["flyTo"],
             local_departure=data["route"][0]["local_departure"].split("T")[0],
-            local_arrival=data["route"][0]["local_arrival"].split("T")[0]
+            local_arrival=data["route"][0]["local_arrival"].split("T")[0],
         )
+        data_flight.stop_over = len(flight_way) - 1
+        data_flight.via_city = city_through
 
-        print(f"{data_flight.destination_city}: {data_flight.price} VND")
-        print(f"Local departure: {data_flight.local_departure}\nLocal arrival: {data_flight.local_arrival}")
+        print(f"Price: {data_flight.price} VND")
+        print(f"Local departure: {data_flight.local_departure}")
+        print(f"City through: {data_flight.via_city}")
         return data_flight
-
-
 
 
