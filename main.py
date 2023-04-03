@@ -1,4 +1,5 @@
-import requests
+import math
 
-response = requests.get(url="http://api.open-notify.org/iss-now.json")
-print(response.json())
+res = math.comb(999, 99)
+res = res % 1000000007
+print(res)
