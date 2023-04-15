@@ -6,7 +6,7 @@ import time
 PROMISED_DOWN = 150
 PROMISED_UP = 10
 
-TWITTER_EMAIL = "chuthimai7323@gmail.com"
+TWITTER_EMAIL = "@gmail.com"
 
 
 class InternetSpeedTwitterBot():
