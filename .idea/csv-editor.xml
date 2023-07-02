@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/NATO-alphabet-start/nato_phonetic_alphabet.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/flash-card-project-start/data/english-vietnamese.csv">
           <value>
             <Attribute>
