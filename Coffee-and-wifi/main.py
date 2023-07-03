@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for
-from flask_bootstrap import Bootstrap4
+from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, SelectField, URLField
 from wtforms.validators import DataRequired, URL
@@ -7,7 +7,7 @@ import csv
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
-Bootstrap4(app)
+Bootstrap(app)
 app.secret_key = "nsadjsajdjiqojefnncheufhwjqncda"
 
 
