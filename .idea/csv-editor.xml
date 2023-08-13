@@ -10,6 +10,48 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/Data/Google Trends Data Viz (start)/Bitcoin Search Trend.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Data/Google Trends Data Viz (start)/Daily Bitcoin Price.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Data/Google Trends Data Viz (start)/TESLA Search Trend vs Price.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Data/Google Trends Data Viz (start)/UE Benefits Search vs UE Rate 2004-19.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Data/Google Trends Data Viz (start)/UE Benefits Search vs UE Rate 2004-20.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Data/Nobel+Prize+Analysis+Start/nobel_prize_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Day 25/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv">
           <value>
             <Attribute>
