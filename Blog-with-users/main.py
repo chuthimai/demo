@@ -69,8 +69,8 @@ class Comment(db.Model):
     parent_post = relationship("BlogPost", back_populates="comments")
 
 
-with app.app_context():
-    db.create_all()
+# with app.app_context():
+#     db.create_all()
 
 
 #Create admin-only decorator
@@ -102,9 +102,15 @@ def register():
             password=generate_password_hash(form.password.data, salt_length=8),
             name=form.name.data
         )
-        if db.session.execute(db.select(User).where(User.email == user.email)).first():
-            flash("You've already signed up with that email, log in instead!")
-            return redirect(url_for('login'))
+        if User.query.all() != []:
+            if db.session.execute(db.select(User).where(User.email == user.email)).first():
+                flash("You've already signed up with that email, log in instead!")
+                return redirect(url_for('login'))
+            else:
+                db.session.add(user)
+                db.session.commit()
+                login_user(user)
+                return redirect(url_for('get_all_posts'))
         else:
             db.session.add(user)
             db.session.commit()
