@@ -45,6 +45,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/Data/Google+Play+Store+Project+(Start)/apps.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Data/Nobel+Prize+Analysis+Start/nobel_prize_data.csv">
           <value>
             <Attribute>
@@ -60,6 +67,13 @@
           </value>
         </entry>
         <entry key="/NATO-alphabet-start/nato_phonetic_alphabet.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Web/Collect Data/Price of house.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
